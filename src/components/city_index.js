@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchCities } from '../actions';
 
 class CityIndex extends Component {
@@ -21,6 +22,11 @@ class CityIndex extends Component {
 	render() {
 		return (
 			<div>
+				<div className="text-xs-right">
+					<Link className="btn btn-primary" to="/city/new">
+						Add a City
+					</Link>
+				</div>
 				<h3>Cities</h3>
 				<ul className="list-group">
 					{this.renderCities()}
