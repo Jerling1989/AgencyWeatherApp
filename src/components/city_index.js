@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchCities } from '../actions';
 
 class CityIndex extends Component {
+	componentDidMount() {
+		this.props.fetchCities();
+	}
+
 	render() {
 		return (
 			<div>
@@ -10,4 +16,4 @@ class CityIndex extends Component {
 	}
 }
 
-export default CityIndex;
+export default connect(null, { fetchCities })(CityIndex);
