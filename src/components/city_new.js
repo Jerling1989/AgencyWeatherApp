@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import { Field, reduxForm } from 'redux-form';
 
 class CityNew extends Component {
 	render() {
 		return (
-			<div>
-				CityNew
-			</div>
+			<form>
+				<Field
+					name="title"
+					Component={}
+				/>
+			</form>
 		);
 	}
 }
 
-export default CityNew;
+export default reduxForm({
+	form: 'CityNewForm'
+})(CityNew);
