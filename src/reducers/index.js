@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import CityReducer from './reducer_cities';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  cities: CityReducer
 });
 
 export default rootReducer;
