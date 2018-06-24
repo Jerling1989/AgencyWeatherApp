@@ -7,6 +7,7 @@ import promise from 'redux-promise';
 
 import reducers from './reducers';
 import CityIndex from './components/city_index';
+import CityNew from './components/city_new';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -16,6 +17,7 @@ ReactDOM.render(
     	<div>
     		Header
 	    	<Route path="/" component={CityIndex} />
+	    	<Route path="/city/new" component={CityNew} />
     	</div>
     </BrowserRouter>
   </Provider>

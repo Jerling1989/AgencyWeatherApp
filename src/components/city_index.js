@@ -9,10 +9,10 @@ class CityIndex extends Component {
 	}
 
 	renderCities() {
-		return _.map(this.props.cities, post => {
+		return _.map(this.props.cities, city => {
 			return (
-				<li className="list-group-item" key={post.id}>
-					{post.title}
+				<li className="list-group-item" key={city.id}>
+					{city.title}
 				</li>
 			);
 		});
