@@ -15,8 +15,9 @@ export function fetchCities() {
 	};
 }
 
-export function addCity(values) {
-	const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, values);
+export function addCity(values, callback) {
+	const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, values)
+		.then(() => callback());
 
 	return {
 		type: ADD_CITY,

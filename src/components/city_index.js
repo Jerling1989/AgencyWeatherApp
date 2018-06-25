@@ -16,7 +16,7 @@ class CityIndex extends Component {
 					{city.title}
 				</li>
 			);
-		});
+		}).reverse();
 	}
 
 	render() {

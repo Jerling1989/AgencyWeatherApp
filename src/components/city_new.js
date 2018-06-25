@@ -26,7 +26,15 @@ class CityNew extends Component {
 	}
 
 	onSubmit(values) {
-		this.props.addCity(values);
+		const cityNameArray = [];
+		for (let word of values.title.split(' ')) {
+			cityNameArray.push(word[0].toUpperCase() + word.slice(1));
+		}
+		values.title = cityNameArray.join(' ');
+
+		this.props.addCity(values, () => {
+			this.props.history.push('/');
+		});
 	}
 
 	render() {
