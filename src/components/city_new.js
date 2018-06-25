@@ -30,6 +30,19 @@ class CityNew extends Component {
 	}
 }
 
+
+function validate(values) {
+	const errors = {};
+
+	if (!values.title) {
+		errors.title = "Enter a City Name!";
+	}
+
+	return errors;
+}
+
+
 export default reduxForm({
+	validate,
 	form: 'CityNewForm'
 })(CityNew);
