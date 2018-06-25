@@ -4,6 +4,8 @@ import { Field, reduxForm } from 'redux-form';
 class CityNew extends Component {
 
 	renderField(field) {
+		const { meta: { touched, error } } = field;
+		
 		return (
 			<div className="form-group">
 				<label>{field.label}</label>
@@ -13,7 +15,9 @@ class CityNew extends Component {
 					type="text"
 					{...field.input}
 				/>
-				{field.meta.touched ? field.meta.error : ''}
+				<div className="text-help">
+					{field.meta.touched ? field.meta.error : ''}
+				</div>
 			</div>
 		);
 	}
