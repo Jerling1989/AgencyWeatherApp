@@ -13,6 +13,7 @@ class CityNew extends Component {
 					type="text"
 					{...field.input}
 				/>
+				{field.meta.error}
 			</div>
 		);
 	}
