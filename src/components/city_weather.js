@@ -4,14 +4,20 @@ import { cityWeather } from '../actions';
 
 class CityWeather extends Component {
 	componentDidMount() {
-	  const { id } = this.props.match.params.id;
+	  const { id } = this.props.match.params;
 		this.props.cityWeather(id);
 	}
 
 	render() {
+		const { city } = this.props;
+
+		if (!city) {
+			return <div>Loading...</div>
+		}
+
 		return (
 			<div>
-				City Weather
+				<h2>{city.title}</h2>
 			</div>
 		);
 	}
