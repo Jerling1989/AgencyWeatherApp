@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { Link } from 'react-router-dom';
 
 class CityNew extends Component {
 
 	renderField(field) {
 		const { meta: { touched, error } } = field;
-		
+
 		return (
 			<div className="form-group">
 				<label>{field.label}</label>
@@ -39,6 +40,7 @@ class CityNew extends Component {
 				<button type="submit" className="btn btn-primary">
 					Submit
 				</button>
+				<Link to="/" className="btn btn-danger">Cancel</Link>
 			</form>
 		);
 	}
