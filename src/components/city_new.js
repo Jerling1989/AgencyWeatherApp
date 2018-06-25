@@ -5,8 +5,11 @@ class CityNew extends Component {
 
 	renderField(field) {
 		return (
-			<div>
+			<div className="form-group">
+				<label>{field.label}</label>
 				<input 
+					autocomplete="off"
+					className="form-control"
 					type="text"
 					{...field.input}
 				/>
@@ -18,8 +21,9 @@ class CityNew extends Component {
 		return (
 			<form>
 				<Field
+					label="City Name"
 					name="title"
-					Component={this.renderField}
+					component={this.renderField}
 				/>
 			</form>
 		);
