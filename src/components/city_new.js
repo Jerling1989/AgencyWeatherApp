@@ -8,7 +8,7 @@ class CityNew extends Component {
 			<div className="form-group">
 				<label>{field.label}</label>
 				<input 
-					autocomplete="off"
+					autoComplete="off"
 					className="form-control"
 					type="text"
 					{...field.input}
@@ -18,14 +18,23 @@ class CityNew extends Component {
 		);
 	}
 
+	onSubmit(values) {
+		console.log(values);
+	}
+
 	render() {
+		const { handleSubmit } = this.props;
+
 		return (
-			<form>
+			<form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 				<Field
 					label="City Name"
 					name="title"
 					component={this.renderField}
 				/>
+				<button type="submit" className="btn btn-primary">
+					Submit
+				</button>
 			</form>
 		);
 	}
