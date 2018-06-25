@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { addCity } from '../actions';
 
 class CityNew extends Component {
 
@@ -24,7 +26,7 @@ class CityNew extends Component {
 	}
 
 	onSubmit(values) {
-		console.log(values);
+		this.props.addCity(values);
 	}
 
 	render() {
@@ -61,4 +63,11 @@ function validate(values) {
 export default reduxForm({
 	validate,
 	form: 'CityNewForm'
-})(CityNew);
+})(
+	connect(null, { addCity })(CityNew)
+);
+
+
+
+
+
