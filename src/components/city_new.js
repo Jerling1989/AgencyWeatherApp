@@ -20,7 +20,7 @@ class CityNew extends Component {
 					{...field.input}
 				/>
 				<div className="red-text">
-					{field.meta.touched ? field.meta.error : ''}
+					{touched ? error : ''}
 				</div>
 			</div>
 		);

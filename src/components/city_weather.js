@@ -27,12 +27,13 @@ class CityWeather extends Component {
 			<div>
 				<Link to="/">Back to Homepage</Link>
 				<button
-					className="btn btn-danger pull-xs-right"
+					className="btn-floating btn-large waves-effect waves-light red"
 					onClick={this.onDeleteClick.bind(this)}
 				>
-					Delete City
+					<i className="material-icons">delete</i>
 				</button>
-				<h2>{city.title}</h2>
+				<h3 className="center-align">{city.title}</h3>
+			{/* ADD WEATHER DATA BELOW */}
 			</div>
 		);
 	}
