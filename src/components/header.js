@@ -4,7 +4,7 @@ import React from 'react';
 const Header = () => {
 	return (
 		<div>
-			<h1>AGENCY WEATHER APP</h1>
+			<img class="responsive-img" src="../../img/agency_logo.png" />
 		</div>
 	);
 };

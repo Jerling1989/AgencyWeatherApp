@@ -14,8 +14,7 @@ class CityNew extends Component {
 				<label>{field.label}</label>
 				<i className="material-icons prefix">{field.icon}</i>
 				<input 
-					autoComplete="off"
-					placeholder={field.label}
+					placeholder={field.placeholder}
 					type="text"
 					{...field.input}
 				/>
@@ -36,11 +35,11 @@ class CityNew extends Component {
 		const { handleSubmit } = this.props;
 
 		return (
-			<form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+			<form autoComplete="off" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 			<h3 className="center-align">Add New City</h3>
 				<Field
-					icon="title"
-					label="City Name"
+					icon="edit_location"
+					placeholder="City Name"
 					name="title"
 					component={this.renderField}
 				/>
