@@ -10,15 +10,16 @@ class CityNew extends Component {
 		const { meta: { touched, error } } = field;
 
 		return (
-			<div className="form-group">
+			<div className="input-field">
 				<label>{field.label}</label>
+				<i className="material-icons prefix">{field.icon}</i>
 				<input 
 					autoComplete="off"
-					className="form-control"
+					placeholder={field.label}
 					type="text"
 					{...field.input}
 				/>
-				<div className="text-help">
+				<div className="red-text">
 					{field.meta.touched ? field.meta.error : ''}
 				</div>
 			</div>
@@ -36,15 +37,15 @@ class CityNew extends Component {
 
 		return (
 			<form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+			<h3 className="center-align">Add New City</h3>
 				<Field
+					icon="title"
 					label="City Name"
 					name="title"
 					component={this.renderField}
 				/>
-				<button type="submit" className="btn btn-primary">
-					Submit
-				</button>
-				<Link to="/" className="btn btn-danger">Cancel</Link>
+				<button type="submit" className="waves-effect waves-light btn teal">Submit</button>
+				<Link to="/" className="waves-effect waves-light btn red">Cancel</Link>
 			</form>
 		);
 	}
