@@ -12,9 +12,15 @@ class CityIndex extends Component {
 	renderCities() {
 		return _.map(this.props.cities, city => {
 			return (
-				<li className="list-group-item" key={city.id}>
+				<li className="col s12 m6" key={city.id}>
 					<Link to={`/city/${city.id}`}>
-						{city.title}
+						<div className="card blue-grey darken-1 z-depth-3">
+			        <div className="card-content white-text">
+			          <span className="card-title">{city.title}</span>
+			        	{/* INSERT BASIC WEATHER INFO */}
+			        </div>
+			      </div>
+
 					</Link>
 				</li>
 			);
@@ -24,13 +30,13 @@ class CityIndex extends Component {
 	render() {
 		return (
 			<div>
-				<div className="text-xs-right">
-					<Link className="btn btn-primary" to="/city/new">
-						Add a City
+				<div className="">
+					<Link className="btn-floating btn-large waves-effect waves-light teal" to="/city/new">
+						<i className="material-icons">create</i> {/*Add a City*/}
 					</Link>
 				</div>
-				<h3>Cities</h3>
-				<ul className="list-group">
+				<h3 className="center-align">Cities</h3>
+				<ul className="row">
 					{this.renderCities()}
 				</ul>
 			</div>
