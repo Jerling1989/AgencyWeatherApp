@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { cityWeather, deleteCity } from '../actions';
+import { cityWeather, deleteCity, fetchWeather } from '../actions';
 
 class CityWeather extends Component {
 	componentDidMount() {
@@ -16,26 +16,33 @@ class CityWeather extends Component {
 		});
 	}
 
+	
+
 	render() {
 		const { city } = this.props;
+		
+		
 
 		if (!city) {
 			return <div>Loading...</div>
+		} else {
+			
+			this.props.fetchWeather(city.title);
+			return (
+				<div>
+					<Link to="/">Back to Homepage</Link>
+					<button
+						className="btn-floating btn-large waves-effect waves-light red"
+						onClick={this.onDeleteClick.bind(this)}
+					>
+						<i className="material-icons">delete</i>
+					</button>
+					<h3 className="center-align">{city.title}</h3>
+				{/* ADD WEATHER DATA BELOW*/}
+					<h5></h5>
+				</div>
+			);
 		}
-
-		return (
-			<div>
-				<Link to="/">Back to Homepage</Link>
-				<button
-					className="btn-floating btn-large waves-effect waves-light red"
-					onClick={this.onDeleteClick.bind(this)}
-				>
-					<i className="material-icons">delete</i>
-				</button>
-				<h3 className="center-align">{city.title}</h3>
-			{/* ADD WEATHER DATA BELOW*/}
-			</div>
-		);
 	}
 }
 
@@ -43,4 +50,4 @@ function mapStateToProps({ cities }, ownProps) {
 	return { city: cities[ownProps.match.params.id] };
 }
 
-export default connect(mapStateToProps, { cityWeather, deleteCity })(CityWeather);
+export default connect(mapStateToProps, { cityWeather, deleteCity, fetchWeather })(CityWeather);

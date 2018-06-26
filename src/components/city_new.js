@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addCity } from '../actions';
+import { addCity, fetchWeather } from '../actions';
 
 class CityNew extends Component {
 
@@ -26,6 +26,8 @@ class CityNew extends Component {
 	}
 
 	onSubmit(values) {
+		// this.props.fetchWeather(values.title);
+
 		this.props.addCity(values, () => {
 			this.props.history.push('/');
 		});
@@ -66,7 +68,7 @@ export default reduxForm({
 	validate,
 	form: 'CityNewForm'
 })(
-	connect(null, { addCity })(CityNew)
+	connect(null, { addCity, fetchWeather })(CityNew)
 );
 
 

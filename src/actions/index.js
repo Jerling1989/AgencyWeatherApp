@@ -10,7 +10,7 @@ const DB_API_KEY = '?key=AgencyWeatherApp';
 const DB_ROOT_URL = 'http://reduxblog.herokuapp.com/api';
 
 const W_API_KEY = '43ddad3004e216a2b72d28d891fbe712';
-const W_ROOT_URL = `https://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`
+const W_ROOT_URL = `https://api.openweathermap.org/data/2.5/forecast?appid=${W_API_KEY}`
 
 export function fetchCities() {
 	const request = axios.get(`${DB_ROOT_URL}/posts${DB_API_KEY}`);
