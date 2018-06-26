@@ -15,12 +15,22 @@ textarea {
 }
 
 h3 {
-	font-family: 'Fugaz One', cursive;
+	/*font-family: 'Fugaz One', cursive;*/
+	font-weight: bolder;
 }
 
 h6 {
 	position: relative;
 	top: 0px;
+}
+
+.card {
+	background-color: #3e4768;
+	cursor: pointer;
+}
+
+.card:hover {
+	background-color: #3b5998;
 }
 
 .btn-floating {

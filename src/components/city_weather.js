@@ -33,7 +33,7 @@ class CityWeather extends Component {
 					<i className="material-icons">delete</i>
 				</button>
 				<h3 className="center-align">{city.title}</h3>
-			{/* ADD WEATHER DATA BELOW */}
+			{/* ADD WEATHER DATA BELOW*/}
 			</div>
 		);
 	}

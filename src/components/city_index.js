@@ -14,7 +14,7 @@ class CityIndex extends Component {
 			return (
 				<li className="col s12 m6" key={city.id}>
 					<Link to={`/city/${city.id}`}>
-						<div className="card blue-grey darken-1 z-depth-3">
+						<div className="card z-depth-3">
 			        <div className="card-content white-text">
 			          <span className="card-title">{city.title}</span>
 			        	{/* INSERT BASIC WEATHER INFO */}
@@ -32,10 +32,10 @@ class CityIndex extends Component {
 			<div>
 				<div className="">
 					<Link className="btn-floating btn-large waves-effect waves-light teal" to="/city/new">
-						<i className="material-icons">create</i> {/*Add a City*/}
+						<i className="material-icons">add</i> {/*Add a City*/}
 					</Link>
 				</div>
-				<h3 className="center-align">Cities</h3>
+				<h3 className="center-align">Your Cities</h3>
 				<ul className="row">
 					{this.renderCities()}
 				</ul>

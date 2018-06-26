@@ -38,7 +38,7 @@ class CityNew extends Component {
 			<form autoComplete="off" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 			<h3 className="center-align">Add New City</h3>
 				<Field
-					icon="edit_location"
+					icon="location_city"
 					placeholder="City Name"
 					name="title"
 					component={this.renderField}

@@ -4,12 +4,16 @@ export const FETCH_CITIES = 'fetch_cities';
 export const ADD_CITY = 'add_city';
 export const CITY_WEATHER = 'city_weather';
 export const DELETE_CITY = 'delete_city';
+export const FETCH_WEATHER = 'fetch_weather';
 
-const ROOT_URL = 'http://reduxblog.herokuapp.com/api';
-const API_KEY = '?key=AgencyWeatherApp';
+const DB_API_KEY = '?key=AgencyWeatherApp';
+const DB_ROOT_URL = 'http://reduxblog.herokuapp.com/api';
+
+const W_API_KEY = '43ddad3004e216a2b72d28d891fbe712';
+const W_ROOT_URL = `https://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`
 
 export function fetchCities() {
-	const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);
+	const request = axios.get(`${DB_ROOT_URL}/posts${DB_API_KEY}`);
 
 	return {
 		type: FETCH_CITIES,
@@ -24,7 +28,7 @@ export function addCity(values, callback) {
 	}
 	values.title = cityNameArray.join(' ');
 
-	const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, values)
+	const request = axios.post(`${DB_ROOT_URL}/posts${DB_API_KEY}`, values)
 		.then(() => callback());
 
 	return {
@@ -34,7 +38,7 @@ export function addCity(values, callback) {
 }
 
 export function cityWeather(id) {
-	const request = axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`);
+	const request = axios.get(`${DB_ROOT_URL}/posts/${id}${DB_API_KEY}`);
 
 	return {
 		type: CITY_WEATHER,
@@ -43,7 +47,7 @@ export function cityWeather(id) {
 }
 
 export function deleteCity(id, callback) {
-	const request = axios.delete(`${ROOT_URL}/posts/${id}${API_KEY}`)
+	const request = axios.delete(`${DB_ROOT_URL}/posts/${id}${DB_API_KEY}`)
 		.then(() => callback());
 
 	return {
@@ -51,6 +55,15 @@ export function deleteCity(id, callback) {
 		payload: id
 	}
 }
+
+export function fetchWeather(city) {
+	const request = axios.get(`${W_ROOT_URL}&q=${city},us`);
+	
+	return {
+		type: FETCH_WEATHER,
+		payload: request
+	};
+} 
 
 
 
