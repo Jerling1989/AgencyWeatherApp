@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 
 import reducers from './reducers';
+import Header from './components/header';
 import CityIndex from './components/city_index';
 import CityNew from './components/city_new';
 import CityWeather from './components/city_weather';
@@ -16,6 +17,7 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
     	<div>
+    		<Header />
     		<Switch>
     			<Route path="/city/new" component={CityNew} />
     			<Route path="/city/:id" component={CityWeather} />
