@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { cityWeather } from '../actions'; 
+import { Link } from 'react-router-dom';
+import { cityWeather } from '../actions';
 
 class CityWeather extends Component {
 	componentDidMount() {
@@ -17,6 +18,7 @@ class CityWeather extends Component {
 
 		return (
 			<div>
+				<Link to="/">Back to Homepage</Link>
 				<h2>{city.title}</h2>
 			</div>
 		);

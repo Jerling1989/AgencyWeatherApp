@@ -13,7 +13,9 @@ class CityIndex extends Component {
 		return _.map(this.props.cities, city => {
 			return (
 				<li className="list-group-item" key={city.id}>
-					{city.title}
+					<Link to={`/city/${city.id}`}>
+						{city.title}
+					</Link>
 				</li>
 			);
 		}).reverse();
