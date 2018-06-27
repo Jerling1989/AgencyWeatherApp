@@ -20,7 +20,15 @@ class CityImage extends Component {
 		}
 
 		return(
-			<img className="responsive-img" src={this.state.cityImage} />
+			
+			<div className="card z-depth-3 city-index">
+				<div class="card-image waves-effect waves-block waves-light">
+		      <img class="activator" src={this.state.cityImage} />
+		    </div>
+        <div className="card-content white-text">
+          <span className="center-align card-title">{this.props.name}</span>
+        </div>
+      </div>
 		);
 	}
 }

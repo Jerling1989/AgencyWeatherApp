@@ -13,22 +13,12 @@ class CityIndex extends Component {
 
 	renderCities() {
 		return _.map(this.props.cities, city => {
-			// this.props.fetchWeather(city.title).then((res) => {
-			// 	lon = res.payload.data.city.coord.lon;
-			// 	lat = res.payload.data.city.coord.lat;
-			// 	console.log(lon, lat);
-			// });
-			// console.log(lon, lat);
 			return (
 				<li className="col s12 m6" key={city.id}>
 					<Link to={`/city/${city.id}`}>
-						<div className="card z-depth-3 city-index">
-			        <div className="card-content white-text">
+
 			        	<CityImage name={city.title} />
-			          <span className="card-title">{city.title}</span>
-			        	{/* INSERT BASIC WEATHER INFO */}
-			        </div>
-			      </div>
+
 
 					</Link>
 				</li>

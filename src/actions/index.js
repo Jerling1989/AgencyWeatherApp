@@ -7,7 +7,7 @@ export const DELETE_CITY = 'delete_city';
 export const FETCH_WEATHER = 'fetch_weather';
 
 
-const DB_API_KEY = '?key=AgencyWeatherApp';
+const DB_API_KEY = '?key=AgencyWeatherApp1';
 const DB_ROOT_URL = 'http://reduxblog.herokuapp.com/api';
 
 const W_API_KEY = '160f8a6730ce37a5842cab492fbe7e4d';
