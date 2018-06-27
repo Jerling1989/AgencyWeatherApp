@@ -3,7 +3,7 @@ This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, 
 
 ---
 
-- one
+- When the user first navigates to the application they will be directed to the home page. Here there are info cards for each city with the city name displayed as well as a picture. From this page the user can click on one of the cards to be redirected to the specific city page, where they can view weather data for that specific city. 
 ![HOME PAGE](/read_me/1-landing.png)
 
 - two
