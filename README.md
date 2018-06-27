@@ -23,8 +23,8 @@ This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, 
 - After adding a new city the user will be redirected back to the homepage, where the new city is at the beginning of the city list.
 ![NEW CITE=Y ADDED](/read_me/5-new-city.png)
 
-- six
+- The user can delete and city they no longer want the weather data for but clicking on the red button on the bottom right corner of the city weather page.
 ![DELETE CITY](/read_me/6-delete-city.png)
 
-- seven
+- Once the user had deleted a city they will be redirected to the homepgae, where the city is no longer avaliable.
 ![BACK HOME](/read_me/7-return.png)
