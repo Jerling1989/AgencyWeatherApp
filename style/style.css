@@ -1,21 +1,8 @@
-#p_wrap {
-  white-space: pre-line;
-}
-
-#add-city {
-	width: 50%;
-}
-
 form a {
 	margin-left: 10px;
 }
 
-textarea {
-	height: 250px;
-}
-
 h3 {
-	/*font-family: 'Fugaz One', cursive;*/
 	font-weight: bolder;
 }
 
@@ -53,6 +40,7 @@ h5 {
 	width: 50%;
 }
 
+/* LARGE SCREEN SIZE */
 @media (min-width: 992px) and (max-width: 1199.98px) {
 	.chart-card {
 		height: 300px;
@@ -63,6 +51,7 @@ h5 {
 	}
 }
 
+/* MEDIUM SCREEN SIZE */
 @media (min-width: 768px) and  (max-width: 991.98px) {
 	.chart-card {
 		height: 280px;
@@ -72,6 +61,7 @@ h5 {
 	}
 }
 
+/* SMALL SCREEN SIZE */
 @media (min-width: 576px) and (max-width: 767.98px) {
 	.chart-card {
 		height: 260px;
@@ -81,6 +71,7 @@ h5 {
 	}
 }
 
+/* EXTRA SMALL SCREEN SIZE */
 @media (max-width: 575.98px) {
 	.chart-card {
 		height: 220px;

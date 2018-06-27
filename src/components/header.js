@@ -1,6 +1,7 @@
 // IMPORT REACT
 import React from 'react';
 
+// HEADER COMPONENT
 const Header = () => {
 	return (
 		<div>
