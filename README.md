@@ -3,6 +3,8 @@ This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, 
 
 **NOTE: for the sake of the developer test for Agency Within I used their logo for this application. I am in no way a representative of Agency Within or thier brand. I will replace the logo with a new generic header once the test has been reviewed or upon request.**
 
+**NOTE: I do not control the backend API used fot the database. The database is occasionally scrubbed of all data.**
+
 ---
 
 - When the user first navigates to the application they will be directed to the home page. Here there are info cards for each city with the city name displayed as well as a picture. From this page the user can click on one of the cards to be redirected to the specific city page, where they can view weather data for that specific city. 
@@ -28,3 +30,10 @@ This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, 
 
 - Once the user had deleted a city they will be redirected to the homepgae, where the city is no longer avaliable.
 ![BACK HOME](/read_me/7-return.png)
+
+---
+Future Upgrades:
+- Create unique backend database for application
+- Form Validation to check if city name is valid before sending (right now it'll save to the database and the data won't load)
+- Google Maps intergration
+- User authentication. Every user can have their own list of cities
