@@ -7,19 +7,19 @@ This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, 
 ![HOME PAGE](/read_me/1-landing.png)
 
 - two
-![HOME PAGE](/read_me/2-city-top.png)
+![CITY INFO TOP](/read_me/2-city-top.png)
 
 - three
-![HOME PAGE](/read_me/3-citiy-bottom.png)
+![CITY INFO BOTTOM](/read_me/3-ciiy-bottom.png)
 
 - four
-![HOME PAGE](/read_me/4-add-city.png)
+![ADD NEW CITY](/read_me/4-add-city.png)
 
 - five
-![HOME PAGE](/read_me/5-new-city.png)
+![NEW CITE=Y ADDED](/read_me/5-new-city.png)
 
 - six
-![HOME PAGE](/read_me/6-delete-city.png)
+![DELETE CITY](/read_me/6-delete-city.png)
 
 - seven
-![HOME PAGE](/read_me/7-return.png)
+![BACK HOME](/read_me/7-return.png)
