@@ -48,14 +48,34 @@ class CityWeather extends Component {
 				>
 					<i className="material-icons">delete</i>
 				</button>
-				<h3 className="center-align">{city.title}</h3>
+				<h3 className="center-align">{city.title} Weather Information</h3>
+				<br />
 			{/* ADD WEATHER DATA BELOW*/}
 				<div>
-					<Chart data={temps} color="orange" units="&deg;F" />
+					<div className="col s12 card z-depth-3 chart-card">
+		        <div className="card-content white-text">
+		        	<h5>5 Day Temperature Chart</h5>
+		          <Chart name="Temperature" data={temps} color="white" units="&deg;F" />
+		        </div>
+		      </div>
 					<br />
-					<Chart data={pressure} color="green" units="hPa" />
+
+					<div className="col s12 card z-depth-3 chart-card">
+		        <div className="card-content white-text">
+		        	<h5>5 Day Pressure Chart</h5>
+		          <Chart name="Pressure" data={pressure} color="white" units="hPa" />
+		        </div>
+		      </div>
 					<br />
-					<Chart data={humidity} color="black" units="%" />
+
+					<div className="col s12 card z-depth-3 chart-card">
+		        <div className="card-content white-text">
+		        	<h5>5 Day Humidity Chart</h5>
+		          <Chart name="Humidity" data={humidity} color="white" units="%" />
+		        </div>
+		      </div>
+					<br />
+					
 				</div>
 			</div>
 		);

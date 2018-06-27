@@ -24,13 +24,22 @@ h6 {
 	top: 0px;
 }
 
+h5 {
+	padding-top: 0;
+	margin-top: 0;
+}
+
 .card {
 	background-color: #3e4768;
+}
+
+.city-index:hover {
+	background-color: #3b5998;
 	cursor: pointer;
 }
 
-.card:hover {
-	background-color: #3b5998;
+.chart-card {
+	height: 360px;
 }
 
 .btn-floating {

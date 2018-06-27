@@ -12,11 +12,12 @@ function average(data) {
 export default (props) => {
 	return (
 		<div>
-			<Sparklines height={120} width={180} data={props.data}>
-				<SparklinesLine style={{ fill: "none" }} color={props.color} />
+			<Sparklines height={60} data={props.data}>
+				<SparklinesLine style={{ strokeWidth: 3, fill: "none" }} color={props.color} />
 				<SparklinesReferenceLine type="avg" />
 			</Sparklines>
-			<div>{average(props.data)} {props.units}</div>
+			<br /><br /><br />
+			<div>The Average {props.name} for the Next 5 Days Will Be: {average(props.data)} {props.units}</div>
 		</div>
 	);
 }
