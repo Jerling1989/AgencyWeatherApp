@@ -24,12 +24,18 @@ class CityWeather extends Component {
 		});
 	}
 
+
 	render() {
 		const { city } = this.props;
+		
 
 		if (!city || !this.state) {
 			return <div>Loading...</div>
 		}
+
+		const temps = this.state.weather.list.map(weather => ((weather.main.temp - 273.15) * 1.8) + 32);
+		const pressure = this.state.weather.list.map(weather => weather.main.pressure);
+		const humidity = this.state.weather.list.map(weather => weather.main.humidity);
 
 		console.log(this.state.weather);
 		// console.log(population);
@@ -44,7 +50,13 @@ class CityWeather extends Component {
 				</button>
 				<h3 className="center-align">{city.title}</h3>
 			{/* ADD WEATHER DATA BELOW*/}
-				<h5>{this.state.weather.city.population}</h5>
+				<div>
+					{temps}
+					<br />
+					{pressure}
+					<br />
+					{humidity}
+				</div>
 			</div>
 		);
 	}
