@@ -24,9 +24,9 @@ class CityImage extends Component {
 
 		return(
 			<div className="card z-depth-3 city-index">
-				<div class="card-image waves-effect waves-block waves-light">
+				<div className="card-image waves-effect waves-block waves-light">
 					{/* CITY IMAGE TAG */}
-		      <img class="activator" src={this.state.cityImage} />
+		      <img className="activator" src={this.state.cityImage} />
 		    </div>
         <div className="card-content white-text">
         	{/* CITY NAME */}
