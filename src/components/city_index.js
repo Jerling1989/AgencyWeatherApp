@@ -36,6 +36,7 @@ class CityIndex extends Component {
 					</Link>
 				</div>
 				<h3 className="center-align">Your Cities</h3>
+				<p className="center-align">click on one of the city cards to view weather data</p>
 				<ul className="row">
 					{this.renderCities()}
 				</ul>
