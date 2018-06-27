@@ -9,7 +9,7 @@ export const FETCH_WEATHER = 'fetch_weather';
 
 // API KEYS FOR BACKEND DATABASE
 const DB_API_KEY = '?key=AgencyWeatherAppFinal';
-const DB_ROOT_URL = 'http://reduxblog.herokuapp.com/api';
+const DB_ROOT_URL = 'https://reduxblog.herokuapp.com/api';
 // API KEYS FOR OPENWEATHERMAP
 const W_API_KEY = '160f8a6730ce37a5842cab492fbe7e4d';
 const W_ROOT_URL = `https://api.openweathermap.org/data/2.5/forecast?appid=${W_API_KEY}`
