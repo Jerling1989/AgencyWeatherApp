@@ -6,10 +6,11 @@ export const CITY_WEATHER = 'city_weather';
 export const DELETE_CITY = 'delete_city';
 export const FETCH_WEATHER = 'fetch_weather';
 
+
 const DB_API_KEY = '?key=AgencyWeatherApp';
 const DB_ROOT_URL = 'http://reduxblog.herokuapp.com/api';
 
-const W_API_KEY = '43ddad3004e216a2b72d28d891fbe712';
+const W_API_KEY = '66624f59050ed120cf48b86af2d1234d';
 const W_ROOT_URL = `https://api.openweathermap.org/data/2.5/forecast?appid=${W_API_KEY}`
 
 export function fetchCities() {

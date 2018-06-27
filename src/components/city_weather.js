@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
 import { cityWeather, deleteCity, fetchWeather } from '../actions';
 
+
 class CityWeather extends Component {
-	componentDidMount() {
+	componentWillMount() {
 	  const { id } = this.props.match.params;
-		this.props.cityWeather(id);
+		this.props.cityWeather(id).then(() => {
+			// console.log(this.props.city.title)
+			this.props.fetchWeather(this.props.city.title).then((res) => {
+				this.setState({ weather: res.payload.data });
+				// console.log(this.state.weather);
+			});
+		});
 	}
 
 	onDeleteClick() {
@@ -16,33 +24,29 @@ class CityWeather extends Component {
 		});
 	}
 
-	
-
 	render() {
 		const { city } = this.props;
-		
-		
 
-		if (!city) {
+		if (!city || !this.state) {
 			return <div>Loading...</div>
-		} else {
-			
-			this.props.fetchWeather(city.title);
-			return (
-				<div>
-					<Link to="/">Back to Homepage</Link>
-					<button
-						className="btn-floating btn-large waves-effect waves-light red"
-						onClick={this.onDeleteClick.bind(this)}
-					>
-						<i className="material-icons">delete</i>
-					</button>
-					<h3 className="center-align">{city.title}</h3>
-				{/* ADD WEATHER DATA BELOW*/}
-					<h5></h5>
-				</div>
-			);
 		}
+
+		console.log(this.state.weather);
+		// console.log(population);
+		return (
+			<div>
+				<Link to="/">Back to Homepage</Link>
+				<button
+					className="btn-floating btn-large waves-effect waves-light red"
+					onClick={this.onDeleteClick.bind(this)}
+				>
+					<i className="material-icons">delete</i>
+				</button>
+				<h3 className="center-align">{city.title}</h3>
+			{/* ADD WEATHER DATA BELOW*/}
+				<h5>{this.state.weather.city.population}</h5>
+			</div>
+		);
 	}
 }
 
