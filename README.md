@@ -10,7 +10,7 @@ This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, 
 ![CITY INFO TOP](/read_me/2-city-top.png)
 
 - three
-![CITY INFO BOTTOM](/read_me/3-ciiy-bottom.png)
+![CITY INFO BOTTOM](/read_me/3-city-bottom.png)
 
 - four
 ![ADD NEW CITY](/read_me/4-add-city.png)
