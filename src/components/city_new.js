@@ -39,6 +39,9 @@ class CityNew extends Component {
 		return (
 			<form autoComplete="off" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 			<h3 className="center-align">Add New City</h3>
+			<div className="center-align">
+				<img id="add-city" className="responsive-img" src="../../img/add_city.png" />
+			</div>
 				<Field
 					icon="location_city"
 					placeholder="City Name"
