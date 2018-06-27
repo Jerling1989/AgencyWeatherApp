@@ -8,11 +8,14 @@ This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, 
 - When the user first navigates to the application they will be directed to the home page. Here there are info cards for each city with the city name displayed as well as a picture. From this page the user can click on one of the cards to be redirected to the specific city page, where they can view weather data for that specific city. 
 ![HOME PAGE](/read_me/1-landing.png)
 
-- Once the user selects a city to view more information on they will be able to see chart data for the five day forcast along with the average of the five day forecast.
+- Once the user selects a city to view more information on they will be able to see chart data for the five day forecast along with the average of the five day forecast.
 ![CITY INFO TOP](/read_me/2-city-top.png)
 
-- This data include Temperature, Humidity, and Pressure.
+- This data includes Temperature, Humidity, and Pressure.
 ![CITY INFO BOTTOM](/read_me/3-city-bottom.png)
+
+- The user can add a new city to thier application by clicking the round button on the bottom right corner of the homepage.
+![HOME PAGE](/read_me/1-landing.png)
 
 - four
 ![ADD NEW CITY](/read_me/4-add-city.png)
