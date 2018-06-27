@@ -17,10 +17,10 @@ This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, 
 - The user can add a new city to thier application by clicking the round button on the bottom right corner of the homepage.
 ![HOME PAGE](/read_me/1-landing.png)
 
-- four
+- Once redirected to the the Add New City page the user can enter the name of a city they woukd like to add.
 ![ADD NEW CITY](/read_me/4-add-city.png)
 
-- five
+- After adding a new city the user will be redirected back to the homepage, where the new city is at the beginning of the city list.
 ![NEW CITE=Y ADDED](/read_me/5-new-city.png)
 
 - six
