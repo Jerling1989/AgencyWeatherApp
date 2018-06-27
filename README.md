@@ -34,6 +34,6 @@ This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, 
 ---
 Future Upgrades:
 - Create unique backend database for application
-- Form Validation to check if city name is valid before sending (right now it'll save to the database and the data won't load)
+- Form Validation to check if form entry is valid US city name before sending (right now it'll save to the database and the weather API request won't load with bad data, creating a bug with the new component )
 - Google Maps intergration
 - User authentication. Every user can have their own list of cities
