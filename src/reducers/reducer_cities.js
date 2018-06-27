@@ -1,6 +1,9 @@
+// IMPORT LODASH
 import _ from 'lodash';
+// IMPORT TYPE VARIABLES
 import { FETCH_CITIES, CITY_WEATHER, DELETE_CITY } from '../actions';
 
+// CREATE POSTSREDUCER
 export default function(state = {}, action) {
 	switch (action.type) {
 
