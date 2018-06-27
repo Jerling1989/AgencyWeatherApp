@@ -25,9 +25,9 @@ h5 {
 	cursor: pointer;
 }
 
-.chart-card {
+/*.chart-card {
 	height: 360px;
-}
+}*/
 
 .btn-floating {
 	position: fixed;
@@ -38,6 +38,28 @@ h5 {
 
 #add-city {
 	width: 50%;
+}
+
+/* EXTRA LARGE SCREEN SIZE */
+@media (min-width: 1500px) {
+	.chart-card {
+		height: 425px;
+	}
+
+	#add-city {
+		width: 50%;
+	}
+}
+
+/* LARGER SCREEN SIZE */
+@media (min-width: 1200px) and (max-width: 1499.98px) {
+	.chart-card {
+		height: 360px;
+	}
+
+	#add-city {
+		width: 50%;
+	}
 }
 
 /* LARGE SCREEN SIZE */
