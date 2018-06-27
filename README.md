@@ -1,9 +1,9 @@
 # AgencyWeatherApp
 This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, React, Node). The Front-End is built with HTML, CSS and JavaScript while also using the React.js and Redux libraries. The SPA navigation is set up using the react-router-dom package. The application's Back-End database functionality is provided by an API that uses Node, Express, and MongoDB. With the app a user can use an API Key to access thier own weather dashboard where they can view weather data, add new cities, and delete cities they no longer wish to see weather data for. This is done by using the axios package to make requests to several APIs. The App also uses the MaterializeCSS library for some extra front end styling.
 
-**NOTE: for the sake of the developer test for Agency Within I used their logo for this application. I am in no way a representative of Agency Within or thier brand. I will replace the logo with a new generic header once the test has been reviewed or upon request.**
+**NOTE: for the sake of the developer test for Agency Within I used their logo for this application. I am in no way a representative of Agency Within or thier brand. I will replace the logo with a new header once the test has been reviewed or upon request.**
 
-**NOTE: I do not control the backend API used fot the database. The database is occasionally scrubbed of all data.**
+**NOTE: I do not control the backend API used for the database. The database is occasionally scrubbed of all data.**
 
 ---
 
