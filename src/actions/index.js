@@ -1,18 +1,20 @@
+// IMPORT AXIOS
 import axios from 'axios';
-
+// EXPORT TYPE VARIABLES
 export const FETCH_CITIES = 'fetch_cities';
 export const ADD_CITY = 'add_city';
 export const CITY_WEATHER = 'city_weather';
 export const DELETE_CITY = 'delete_city';
 export const FETCH_WEATHER = 'fetch_weather';
 
-
+// API KEYS FOR BACKEND DATABASE
 const DB_API_KEY = '?key=AgencyWeatherApp1';
 const DB_ROOT_URL = 'http://reduxblog.herokuapp.com/api';
-
+// API KEYS FOR OPENWEATHERMAP
 const W_API_KEY = '160f8a6730ce37a5842cab492fbe7e4d';
 const W_ROOT_URL = `https://api.openweathermap.org/data/2.5/forecast?appid=${W_API_KEY}`
 
+// FETCH LIST OF CITIES
 export function fetchCities() {
 	const request = axios.get(`${DB_ROOT_URL}/posts${DB_API_KEY}`);
 
@@ -22,6 +24,7 @@ export function fetchCities() {
 	};
 }
 
+// ADD NEW CITY TO DATABASE/LIST
 export function addCity(values, callback) {
 	const cityNameArray = [];
 	for (let word of values.title.split(' ')) {
@@ -38,6 +41,7 @@ export function addCity(values, callback) {
 	};
 }
 
+// GET PAGE OF SPECIFIC CITY FOR WEATHER INFO
 export function cityWeather(id) {
 	const request = axios.get(`${DB_ROOT_URL}/posts/${id}${DB_API_KEY}`);
 
@@ -47,6 +51,7 @@ export function cityWeather(id) {
 	}
 }
 
+// DELETE A CITY FOR DATABASE/LIST
 export function deleteCity(id, callback) {
 	const request = axios.delete(`${DB_ROOT_URL}/posts/${id}${DB_API_KEY}`)
 		.then(() => callback());
@@ -57,6 +62,7 @@ export function deleteCity(id, callback) {
 	}
 }
 
+// GET WEATHER INFORMATION FOR CITY PAGE
 export function fetchWeather(city) {
 	const request = axios.get(`${W_ROOT_URL}&q=${city},us`);
 	
@@ -65,7 +71,3 @@ export function fetchWeather(city) {
 		payload: request
 	};
 } 
-
-
-
-
