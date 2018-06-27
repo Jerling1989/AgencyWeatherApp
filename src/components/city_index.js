@@ -15,11 +15,8 @@ class CityIndex extends Component {
 		return _.map(this.props.cities, city => {
 			return (
 				<li className="col s12 m6" key={city.id}>
-					<Link to={`/city/${city.id}`}>
-
-			        	<CityImage name={city.title} />
-
-
+					<Link id="back-link" to={`/city/${city.id}`}>
+			      <CityImage name={city.title} />
 					</Link>
 				</li>
 			);
