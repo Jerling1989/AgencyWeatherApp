@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { cityWeather, deleteCity, fetchWeather } from '../actions';
-
+import Chart from './chart';
 
 class CityWeather extends Component {
 	componentWillMount() {
@@ -51,11 +51,11 @@ class CityWeather extends Component {
 				<h3 className="center-align">{city.title}</h3>
 			{/* ADD WEATHER DATA BELOW*/}
 				<div>
-					{temps}
+					<Chart data={temps} color="orange" units="&deg;F" />
 					<br />
-					{pressure}
+					<Chart data={pressure} color="green" units="hPa" />
 					<br />
-					{humidity}
+					<Chart data={humidity} color="black" units="%" />
 				</div>
 			</div>
 		);
