@@ -28,7 +28,7 @@ This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, 
 - The user can delete and city they no longer want the weather data for but clicking on the red button on the bottom right corner of the city weather page.
 ![DELETE CITY](/read_me/six-delete-city.png)
 
-- Once the user had deleted a city they will be redirected to the homepgae, where the city is no longer avaliable.
+- Once the user had deleted a city they will be redirected to the homepage, where the city is no longer avaliable.
 ![BACK HOME](/read_me/seven-return.png)
 
 ---
