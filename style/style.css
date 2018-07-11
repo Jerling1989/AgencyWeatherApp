@@ -1,3 +1,10 @@
+.header {
+	background-color: #3e4768;
+	color: #FFFFFF;
+	padding: 1px 0px 10px 0px;
+	font-weight: bolder;
+}
+
 form a {
 	margin-left: 10px;
 }
