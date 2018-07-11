@@ -8,28 +8,28 @@ This is a Single-Page Application (SPA) using the MERN stack (MongoDB, Express, 
 ---
 
 - When the user first navigates to the application they will be directed to the home page. Here there are info cards for each city with the city name displayed as well as a picture. From this page the user can click on one of the cards to be redirected to the specific city page, where they can view weather data for that specific city. 
-![HOME PAGE](/read_me/1-landingg.png)
+![HOME PAGE](/read_me/1-landing.png)
 
 - Once the user selects a city to view more information on they will be able to see chart data for the five day forecast along with the average of the five day forecast.
-![CITY INFO TOP](/read_me/2-city-topg.png)
+![CITY INFO TOP](/read_me/2-city-top.png)
 
 - This data includes Temperature, Humidity, and Pressure.
-![CITY INFO BOTTOM](/read_me/3-city-bottomg.png)
+![CITY INFO BOTTOM](/read_me/3-city-bottom.png)
 
 - The user can add a new city to thier application by clicking the round button on the bottom right corner of the homepage.
-![HOME PAGE](/read_me/1-landingg.png)
+![HOME PAGE](/read_me/1-landing.png)
 
 - Once redirected to the the Add New City page the user can enter the name of a city they woukd like to add.
-![ADD NEW CITY](/read_me/4-add-cityg.png)
+![ADD NEW CITY](/read_me/4-add-city.png)
 
 - After adding a new city the user will be redirected back to the homepage, where the new city is at the beginning of the city list.
-![NEW CITE=Y ADDED](/read_me/5-new-cityg.png)
+![NEW CITE=Y ADDED](/read_me/5-new-city.png)
 
 - The user can delete and city they no longer want the weather data for but clicking on the red button on the bottom right corner of the city weather page.
-![DELETE CITY](/read_me/6-delete-cityg.png)
+![DELETE CITY](/read_me/6-delete-city.png)
 
 - Once the user had deleted a city they will be redirected to the homepgae, where the city is no longer avaliable.
-![BACK HOME](/read_me/7-returng.png)
+![BACK HOME](/read_me/7-return.png)
 
 ---
 Future Upgrades:
